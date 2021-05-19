@@ -1,0 +1,612 @@
+<!doctype html><html><head> 
+    <title>Solar System </title>
+    <script type="text/javascript" id="dcoder_script">//New features coming soon
+      //work in progress
+      //updates in my mind:
+                      //To give a background music 0% ✓
+                      //Add moons 0% ✓
+                      //more facts-100% ✓
+                        alert('Welcome to the Solar System')
+      alert('At the right of the screen there are some info buttons')
+      alert('Hope you enjoy')
+      function onReady(callback) {
+        var intervalId = window.setInterval(function() {
+          if (document.getElementsByTagName('body')[0] !== undefined) {
+            window.clearInterval(intervalId);
+            callback.call(this);
+          }
+        }, 1500);
+      }
+      
+      function setVisible(selector, visible) {
+        document.querySelector(selector).style.display = visible ? 'block' : 'none';
+      }
+      
+      onReady(function() {
+        setVisible('.page', true);
+        setVisible('#loading', false);
+      });
+  </script>     
+   <style type="text/css" id="dcoder_stylesheet">table,td{
+        border:2px ridge;
+        background-image:url("https://www.demilked.com/magazine/wp-content/uploads/2016/06/gif-animations-replace-loading-screen-10.gif");
+        border-color:#B0E0E6;
+          background-repeat:space;
+          background-position:absolute;
+          background-attachment:fixed;
+          background-repeat:no-repeat,;
+          text-align:-webkit-center;
+          background-size:cover;
+  
+      }
+      body,html{
+  
+         background-image:url('https://wallpaperaccess.com/download/space-desktop-399813');
+  
+          background-repeat:space;
+          background-position:cover;
+          background-attachment:fixed;
+          background-repeat:no-repeat;
+          text-align:-webkit-center;
+          background-size:cover;
+  
+        height:100%;
+        width:100%;
+        font-size:30px;
+        }
+  
+   @keyframes pulsate {
+    100% {
+      /* Larger blur radius */
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    }
+    0% {
+      /* Smaller blur radius */
+      text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #fff,
+        0 0 10px #0fa,
+        0 0 45px #0fa,
+        0 0 55px #0fa,
+        0 0 70px #0fa,
+        0 0 80px #0fa;
+    }
+  }
+  
+        #cred
+        {
+          left:750px;
+          color: #fff;
+          text-shadow:
+            0 0 13px #fff,
+            0 0 18px #fff,
+  
+            0 0 81px #0fa,
+            0 0 91px #0fa,
+            0 0 101px #0fa,
+            0 0 150px #0fa;
+  
+            animation: pulsate 1.5s infinite alternate;
+        }
+  
+  
+       button{
+       background-image:url("https://library.kissclipart.com/20180921/atw/kissclipart-cool-pictures-of-the-milky-way-clipart-milky-way-g-d7f35ba5e15688be.png");
+          background-repeat:space;
+          background-position:absolute;
+          background-attachment:fixed;
+          background-repeat:no-repeat,;
+          text-align:-webkit-center;
+          background-size:cover;
+          cursor:pointer;
+          overflow:hidden;        
+          font-size:25px;
+          height:50px;
+          width:29%;
+          font-family:"Times New Roman",Times, serif;
+          font-style:italic;
+          border:1.5px outset;
+           border-color:#1E90FF;
+          text-decoration-line:underline;
+          font-weight:bold;
+          animation:fadeInAnimation ease 5s;
+    animation-iteration-count:1; 
+    animation-fill-mode:forwards;
+  
+  }
+  @keyframes fadeInAnimation { 
+  
+      0% { 
+  
+          opacity: 0; 
+  
+      } 
+  
+      100% { 
+  
+          opacity: 1; 
+  
+       } 
+  }    
+  #solarsystem
+  {
+    position:absolute;
+    margin:auto;
+    width:600px;
+    height:600px;
+    overflow:hidden;
+    padding:50px;
+       animation:fadeInAnimation ease 5s;
+       animation-iteration-count:1; 
+       animation-fill-mode:forwards; 
+  }
+  @keyframes fadeInAnimation { 
+  
+      0% { 
+  
+          opacity:0; 
+  
+      } 
+  
+      100% { 
+  
+          opacity:1; 
+  
+       } 
+  } 
+  
+  #loading {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:100;
+  
+    background-color:#F5FFFA;
+    background-image:url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2c110454-5b33-4416-bf9b-72992c7cb56f/d60eb1v-79212624-e842-4e55-8d58-4ac7514ca8e4.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMmMxMTA0NTQtNWIzMy00NDE2LWJmOWItNzI5OTJjN2NiNTZmXC9kNjBlYjF2LTc5MjEyNjI0LWU4NDItNGU1NS04ZDU4LTRhYzc1MTRjYThlNC5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.P1AQAZ6H1E-Xwu69xiwDXqfZ5h47ZZlXS4u86T6l8nk");
+    background-repeat:no-repeat;
+    background-position:center;
+    width:100%;
+    height:100%;
+  
+   }
+  #abc{
+  
+    font-size:50px;
+    font-weight:bold;
+      opacity:78%;
+    font-family:courier,arial,helvetica;
+    font-style:italic;
+    animation:fadeInAnimation ease 3s;
+    animation-iteration-count:1; 
+    animation-fill-mode:forwards;  
+  }
+  
+  
+  #neptune
+  {
+    position:absolute;
+    width:600px;
+    height:600px;
+    background-color:rgba(0,0,0,0);
+    border:2px dotted #fff;
+    border-radius:100%;
+    animation:solar 109s linear infinite; 
+  }
+  #neptune:after
+  {
+    position:absolute; content:url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Neptune_with_rings_%28transparent_background%29.png/61px-Neptune_with_rings_%28transparent_background%29.png");
+    Left:330px; 
+    top:-12px;
+  }
+  #uranus
+    {
+      position:absolute;
+      width:530px;
+      height:530px;
+      background-color:rgba(0,0,0,0);
+      border:2px dotted #fff;
+      border-radius:100%;
+      left:85px;
+      top:85px;
+      animation:solar 107s linear infinite; 
+      animation-direction:reverse;
+    }
+  #uranus:after
+  {
+    position:absolute; content:url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/3D_Uranus.png/23px-3D_Uranus.png");
+    left:218px;
+    top:-11px;
+    font-size:7px;
+    width:35px;
+  }
+  #saturn
+  {
+    position:absolute;
+    width:460px;
+    height:460px;
+    background-color:rgba(0,0,0,0);
+    border:2px dotted #fff;
+    border-radius:100%;
+    left:120px;
+    top:120px;
+    animation:solar 98s linear infinite;
+  }
+  #saturn:before
+  {
+    position:absolute; content:url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Saturnx.png/45px-Saturnx.png');
+    width:20px;
+    left:230px;
+    top:-19px;
+  }
+  #jupiter
+  {
+    position:absolute;
+    width:385px;
+    height:390px;
+    background-color:rgba(0,0,0,0);
+    border:2px dotted #fff;
+    border-radius:100%;
+    left:155px;
+    top:155px  ; 
+    animation:solar 95s linear infinite;
+  }
+  #jupiter:after 
+  {
+    position:absolute;
+    width:21px;
+    height:21px; content:url('https://i2.wp.com/freepngimages.com/wp-content/uploads/2016/04/planet-jupiter-1.png?w=49');
+    left:210px;
+    top:-18px;
+  }
+  #mars
+  {
+    position:absolute;
+    width:300px;
+    height:300px;
+    background-color:rgba(0,0,0,0);
+    border:2px dotted #fff;
+    border-radius:100%;
+    left:200px;
+    top:200px;
+    animation:solar 76s linear infinite;
+  }
+  #mars:after
+  {  
+    animation-name:rotation; content:url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/3D_Mars.png/17px-3D_Mars.png');
+    position:absolute;
+    left:125px;
+    top:-19px;  
+  }
+  #earth
+  {
+    position:absolute;
+    width:250px;
+    height:250px;
+    background-color:rgba(0,0,0,0);
+    border:2px dotted #fff;
+    border-radius:100%;
+    left:225px;
+    top:225px;
+    animation:solar 69s linear infinite;  
+  }
+  #earth:after
+  {  content:url('https://i1.wp.com/freepngimages.com/wp-content/uploads/2015/09/planet-earth-from-space1.png?w=23');
+    position:absolute;
+    left:75px;
+    top:-9px;  
+  }
+  #venus
+  {
+    position:absolute;
+    width:200px;
+    height:200px;
+    background-color:rgba(0,0,0,0);
+    border:2px dotted #fff;
+    border-radius:100%;
+    left:250px;
+    top:250px;
+    animation:solar 67s linear infinite;
+    animation-direction:reverse;
+  }
+  #venus:after
+  {
+    position:absolute;  content:url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Venus_globe_-_transparent_background.png/18px-Venus_globe_-_transparent_background.png');
+    width:25px;
+    left:76px;
+    top:-17px; 
+  }
+  #mercury
+  {
+    position:absolute;
+    width:150px;
+    height:150px;
+    background-color:rgba(0,0,0,0);
+    border:2px dotted #fff;
+    border-radius:100%;
+    left:275px;
+    top:275px;
+    animation:solar 54s linear infinite;
+  }
+  #mercury:after
+  { 
+    content:url("https://i0.wp.com/freepngimages.com/wp-content/uploads/2016/05/planet-mercury-transparent-background.png?w=12");
+    position:absolute;
+    left:30px;
+    top:-12px; 
+  }
+  #sun
+  {
+    position:absolute;
+    width:160px;
+    height:160px; content:url('https://www.vippng.com/png/full/44-443954_i-do-not-teach-anyone-i-only-provide.png');
+    left:275px;
+    top:270px;
+    animation:solar 100s linear infinite;
+  }
+  #comet1
+  {
+    width:70px;
+    height:25px; content:url("https://i.dlpng.com/static/png/207391_preview.png");
+    position:absolute;
+    left:250px;
+    top:-5px;
+  }
+  @keyframes solar{ 
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+  } 
+   from{transform:revolute(0deg);}
+   to{transform:revolute(360deg);}
+  
+  
+  @keyframes flicker {
+  
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+  
+    }
+  
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }</style></head> 
+   <body> 
+    <div id="solarsystem"> 
+     <div id="neptune"></div> 
+     <div id="uranus"></div> 
+     <div id="saturn"></div> 
+     <div id="jupiter"></div> 
+     <div id="mars"></div> 
+     <div id="earth"></div> 
+     <div id="venus"></div> 
+     <div id="mercury"></div> 
+     <div id="sun"></div> 
+     <div id="comet1"></div> 
+    </div> 
+    <div class="page"></div> 
+    <div id="loading"> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <br> 
+     <p id="abc" style="color:black">Loading Solar System...<br>Loading Planets...<br>Please wait...</p> 
+     <p> </p> 
+    </div> 
+    <br> 
+    <br> 
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style="color:white" type="button" onclick="alert('Neptune is the eighth and farthest-known planet from the Sun in the Solar System. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet.')">Neptune</button> 
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style="color:white" type="button" onclick="alert('Uranus is the seventh planet from the Sun. The name Uranus is a reference to the Greek god of the sky, Uranus. According to Greek mythology, Uranus was the grandfather of Zeus (Jupiter) and father of Cronus (Saturn). It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System.')">Uranus</button> 
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style="color:white" type="button" onclick="alert('Saturn is the sixth planet from sun and second-largest in solar system, after jupiter. it a gas giant with an average radius of about nine times that earth. only has one-eighth density earth.')">Saturn</button> 
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style="color:white" type="button" onclick="alert('Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history.')">Jupiter</button> 
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style="color:white" type="button" onclick="alert('Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being only larger than Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the Red Planet.')">Mars</button> 
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style="color:white" type="button" onclick="alert('Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating estimation and other evidence, Earth formed over 4.5 billion years ago.')">Earth</button> 
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style="color:white" type="button" onclick="alert('Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty. As the second-brightest natural object in the night sky after the Moon, Venus can cast shadows and can be, on rare occasion, visible to the naked eye in broad daylight.')">Venus</button> 
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style="color:white" type="button" onclick="alert('Mercury is the smallest and innermost planet in the Solar System. Its orbit around the Sun takes 87.97 days, the shortest of all the planets in the Solar System. It is named after the Roman deity Mercury, the messenger of the gods.')">Mercury</button> 
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <button style="color:white" type="button" onclick="alert('The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process.[20] It is by far the most important source of energy for life on Earth. Its diameter is about 1.39 million kilometers (864,000 miles), or 109 times that of Earth, and its mass is about 330,000 times that of Earth.')">Sun</button> 
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <h1 style="color:white"> Solar System </h1> 
+    <p style="color:white">Our solar ststem consists of 8 planets <br>and 5 dwarf planets. Including the Sun. <br>The following table consist their name <br> in the correct order</p> 
+    <p></p> 
+    <table style="color:white"> 
+     <tbody> 
+      <tr> 
+       <th>S.no</th> 
+       <th>Planets</th> 
+       <th>Dwarfs</th> 
+      </tr> 
+      <tr> 
+       <td>1.</td> 
+       <td>Mercury</td> 
+       <td>X</td> 
+      </tr> 
+      <tr> 
+       <td>2.</td> 
+       <td>Venus </td> 
+       <td>X </td> 
+      </tr> 
+      <tr> 
+       <td>3.</td> 
+       <td>Earth</td> 
+       <td>X</td> 
+      </tr> 
+      <tr> 
+       <td>4.</td> 
+       <td>Mars</td> 
+       <td>Ceres</td> 
+      </tr> 
+      <tr> 
+       <td>5.</td> 
+       <td>Jupiter</td> 
+       <td>X</td> 
+      </tr> 
+      <tr> 
+       <td>6.</td> 
+       <td>Saturan</td> 
+       <td>X</td> 
+      </tr> 
+      <tr> 
+       <td>7.</td> 
+       <td>Uranus</td> 
+       <td rowspan="2">Pluto<br> Eris</td> 
+      </tr> 
+      <tr> 
+       <td>8.</td> 
+       <td>Neptune</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <p style="color:white">This is the list/table of the number of <br>planets and there dwarfs</p> 
+    <h3 style="color:white">Fun Fact!</h3> 
+    <p style="color:white">There are nearly 200 moons <br>in our solar system</p> 
+    <h4 style="color:white"> Know More!</h4> 
+    <p style="color:white">The Galaxy in which these all planets, <br> their moon, dwarfs, sun and astroid lives <br>is known as Milky Way Galaxy. </p> 
+    <h3 style="color:white">Wierd wow! </h3> 
+    <p style="color:white">Did you knew that our Universe lies<br> in a gaint black hole.</p> 
+    <h3 style="color:white">Facts for you! </h3> 
+    <p style="color:white">1)The names of most of the uranus' moons came from<br>shekspear's novels</p> 
+    <p style="color:white">2)Only the sun covers 99.86% of our solar system </p> 
+    <p style="color:white">3)We knew that venus is the hottesr planet,but did we<br>knew that Uranus is the coldest. The reason is same,they<br>both have atmosphere</p> 
+    <h1 style="color:white">🌜The Moons🌛</h1> 
+    <table style="color:white"> 
+     <tbody> 
+      <tr> 
+       <th>S.no</th> 
+       <th>Number Of Moons</th> 
+       <th>Name Of The Planet</th> 
+       <th>Name Of The Moons</th> 
+      </tr> 
+      <tr> 
+       <td>1.</td> 
+       <td>0 </td> 
+       <td>Mercury</td> 
+       <td>N/A</td> 
+      </tr> 
+      <tr> 
+       <td>2.</td> 
+       <td>0</td> 
+       <td>Venus</td> 
+       <td>N/A</td> 
+      </tr> 
+      <tr> 
+       <td>3.</td> 
+       <td>1</td> 
+       <td>Earth</td> 
+       <td>Luna</td> 
+      </tr> 
+      <tr> 
+       <td>4.</td> 
+       <td>2</td> 
+       <td>Mars</td> 
+       <td>Phobos, Deimos</td> 
+      </tr> 
+      <tr> 
+       <td>5.</td> 
+       <td>61</td> 
+       <td>Jupiter</td> 
+       <td>Europa, Io, Ganymede,<br> Callisto(Largest)</td> 
+      </tr> 
+      <tr> 
+       <td>6.</td> 
+       <td>50</td> 
+       <td>Saturn</td> 
+       <td>Mimas,Enceladus,Tetheyus,<br>Dione,Rhea,Titan,<br>Hyperoin,Iapetus(Largest)</td> 
+      </tr> 
+      <tr> 
+       <td>7.</td> 
+       <td>27</td> 
+       <td>Uranus</td> 
+       <td>Puck,Miranda,Ariel,<br>Umberiel,Titania,Oberon(largest)</td> 
+      </tr> 
+      <tr> 
+       <td>8.</td> 
+       <td>14</td> 
+       <td>Neptune</td> 
+       <td>Proteus,Tirion(largest)</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <br> 
+    <br> 
+    <br> 
+    <hr style="color:green"> 
+    <p id="cred" style="color:white"> Powered by <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mayank Jindal</p> 
+    <h5 style="color:green" ;font-size:31px;> V1.16.9</h5> 
+  
+  
